@@ -32,7 +32,7 @@ def parse_options(is_train=True):
     parser.add_argument(
         '--launcher',
         choices=['none', 'pytorch', 'slurm'],
-        default='pytorch',
+        default='none',
         help='job launcher')
     parser.add_argument('--local_rank', type=int, default=0)
 
@@ -144,6 +144,8 @@ def create_train_val_dataloader(opt, logger):
 
 
 def main():
+    
+    print("run")
     # parse options, set distributed setting, set ramdom seed
     opt = parse_options(is_train=True)
 
@@ -187,7 +189,7 @@ def main():
     # create train and validation dataloaders
     result = create_train_val_dataloader(opt, logger)
     train_loader, train_sampler, val_loader, total_epochs, total_iters = result
-
+    print("run2")
     # create model
     if resume_state:  # resume training
         check_resume(opt, resume_state['iter'])

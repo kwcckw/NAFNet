@@ -96,7 +96,9 @@ def scandir(dir_path, suffix=None, recursive=False, full_path=False):
                 else:
                     continue
 
-    return _scandir(dir_path, suffix=suffix, recursive=recursive)
+    paths_all = _scandir(dir_path, suffix=suffix, recursive=recursive)
+
+    return paths_all
 
 def scandir_SIDD(dir_path, keywords=None, recursive=False, full_path=False):
     """Scan a directory to find the interested files.

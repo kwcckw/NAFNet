@@ -362,7 +362,10 @@ class ImageRestorationModel(BaseModel):
             keys.append(name)
             metrics.append(value)
         metrics = torch.stack(metrics, 0)
-        torch.distributed.reduce(metrics, dst=0)
+        try:
+            torch.distributed.reduce(metrics, dst=0)
+        except:
+            pass
         if self.opt['rank'] == 0:
             metrics_dict = {}
             cnt = 0
