@@ -18,8 +18,8 @@ datasets:
     name: shabby-test
     type: PairedImageDataset
 
-    dataroot_gt: datasets/shabby/validate/clean
-    dataroot_lq: datasets/shabby/validate/noisy
+    dataroot_gt: datasets/shabby/test/clean
+    dataroot_lq: datasets/shabby/test/noisy
 
     io_backend:
       type: disk
@@ -27,9 +27,9 @@ datasets:
 # network structures
 network_g:
   type: NAFNet
-  width: 4
+  width: 32
   enc_blk_nums: [2, 2, 4, 8]
-  middle_blk_num: 6
+  middle_blk_num: 12
   dec_blk_nums: [2, 2, 2, 2]
 
 # path
