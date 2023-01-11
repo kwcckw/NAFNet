@@ -69,7 +69,7 @@ train:
     T_max: 200000
     eta_min: !!float 1e-7
 
-  total_iter: 10000
+  total_iter: 24600
   warmup_iter: -1 # no warm up
 
   # losses
