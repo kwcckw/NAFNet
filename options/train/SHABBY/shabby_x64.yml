@@ -8,7 +8,7 @@
 name: shabby_x4
 model_type: ImageRestorationModel
 scale: 1
-num_gpu: 4
+num_gpu: 1
 manual_seed: 10
 
 datasets:
