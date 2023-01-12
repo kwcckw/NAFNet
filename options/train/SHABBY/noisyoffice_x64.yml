@@ -69,7 +69,7 @@ train:
     T_max: 200000
     eta_min: !!float 1e-7
 
-  total_iter: 24600
+  total_iter: 3600
   warmup_iter: -1 # no warm up
 
   # losses
@@ -80,7 +80,7 @@ train:
 
 # validation settings
 val:
-  val_freq: !!float 1e3
+  val_freq: !!float 360
   save_img: false
   use_image: false
 
@@ -96,7 +96,7 @@ val:
 
 # logging settings
 logger:
-  print_freq: 200
+  print_freq: 360
   save_checkpoint_freq: !!float 1e3
   use_tb_logger: true
   wandb:
