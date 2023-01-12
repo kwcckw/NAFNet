@@ -5,7 +5,7 @@
 # Copyright 2018-2020 BasicSR Authors
 # ------------------------------------------------------------------------
 # general settings
-name: shabby_x4
+name: noisyoffice_x64
 model_type: ImageRestorationModel
 scale: 1
 num_gpu: 1
@@ -13,10 +13,10 @@ manual_seed: 10
 
 datasets:
   train:
-    name: shabby-train
+    name: noisyoffice-train
     type: PairedImageDataset
-    dataroot_gt: datasets/shabby/train/clean
-    dataroot_lq: datasets/shabby/train/noisy
+    dataroot_gt: datasets/noisyoffice/train/clean
+    dataroot_lq: datasets/noisyoffice/train/noisy
 
     filename_tmpl: '{}'
     io_backend:
@@ -34,10 +34,10 @@ datasets:
     prefetch_mode: ~
 
   val:
-    name: shabby-test
+    name: noisyoffice-test
     type: PairedImageDataset
-    dataroot_gt: datasets/shabby/validate/clean
-    dataroot_lq: datasets/shabby/validate/noisy
+    dataroot_gt: datasets/noisyoffice/validate/clean
+    dataroot_lq: datasets/noisyoffice/validate/noisy
     io_backend:
       type: disk
 
