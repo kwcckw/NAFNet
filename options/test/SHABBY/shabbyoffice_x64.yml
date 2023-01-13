@@ -5,7 +5,7 @@
 # Copyright 2018-2020 BasicSR Authors
 # ------------------------------------------------------------------------
 # general settings
-name: shabby_x64
+name: shabbyoffice_x64
 model_type: ImageRestorationModel
 scale: 1
 num_gpu: 1 # set num_gpu: 0 for cpu mode
@@ -15,11 +15,11 @@ manual_seed: 10
 datasets:
 
   val:
-    name: shabby-test
+    name: shabbyoffice-test
     type: PairedImageDataset
 
-    dataroot_gt: datasets/shabby/test/clean
-    dataroot_lq: datasets/shabby/test/noisy
+    dataroot_gt: datasets/shabbyoffice/test/clean
+    dataroot_lq: datasets/shabbyoffice/test/noisy
 
     io_backend:
       type: disk
@@ -34,7 +34,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/shabby_x64/models/net_g_latest.pth
+  pretrain_network_g: experiments/shabbyoffice_x64/models/net_g_latest.pth
   strict_load_g: true
   resume_state: ~
 

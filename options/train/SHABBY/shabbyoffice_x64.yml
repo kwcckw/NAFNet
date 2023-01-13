@@ -5,7 +5,7 @@
 # Copyright 2018-2020 BasicSR Authors
 # ------------------------------------------------------------------------
 # general settings
-name: shabby_x64
+name: shabbyoffice_x4
 model_type: ImageRestorationModel
 scale: 1
 num_gpu: 1
@@ -13,10 +13,10 @@ manual_seed: 10
 
 datasets:
   train:
-    name: shabby-train
+    name: shabbyoffice-train
     type: PairedImageDataset
-    dataroot_gt: datasets/shabby/train/clean
-    dataroot_lq: datasets/shabby/train/noisy
+    dataroot_gt: datasets/shabbyoffice/train/clean
+    dataroot_lq: datasets/shabbyoffice/train/noisy
 
     filename_tmpl: '{}'
     io_backend:
@@ -34,10 +34,10 @@ datasets:
     prefetch_mode: ~
 
   val:
-    name: shabby-test
+    name: shabbyoffice-test
     type: PairedImageDataset
-    dataroot_gt: datasets/shabby/validate/clean
-    dataroot_lq: datasets/shabby/validate/noisy
+    dataroot_gt: datasets/shabbyoffice/validate/clean
+    dataroot_lq: datasets/shabbyoffice/validate/noisy
     io_backend:
       type: disk
 
@@ -69,7 +69,7 @@ train:
     T_max: 200000
     eta_min: !!float 1e-7
 
-  total_iter: 24600
+  total_iter: 7200
   warmup_iter: -1 # no warm up
 
   # losses
