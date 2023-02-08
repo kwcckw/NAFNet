@@ -69,7 +69,7 @@ train:
     T_max: 200000
     eta_min: !!float 1e-7
 
-  total_iter: 246000
+  total_iter: 195940
   warmup_iter: -1 # no warm up
 
   # losses
@@ -97,7 +97,7 @@ val:
 # logging settings
 logger:
   print_freq: 200
-  save_checkpoint_freq: !!float 2e3
+  save_checkpoint_freq: !!float 9797
   use_tb_logger: true
   wandb:
     project: ~
